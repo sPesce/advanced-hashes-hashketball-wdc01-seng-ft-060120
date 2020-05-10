@@ -197,4 +197,12 @@ def player_stats(name)
     }
     
 end
+
+def big_shoe_rebounds
+  max_shoe = -1
+  game = game_hash
+  game.each{|(key_out, val_out)|
+    
+  }
+end
 #binding.pry 
