@@ -185,13 +185,13 @@ def player_stats(name)
     val[:players].each{|player|
     
     
-    #if (player[:player_name] == name)
+    if (player[:player_name] == name)
       player.each{|(stat_key, stat_val)|
-        if(stat_key != :player_name)
+        #if(stat_key != :player_name)
           player_stat_hash[stat_key] = stat_val
-        end
+        #end
       }
-    #end
+    end
     }
     player_stat_hash  
     }
