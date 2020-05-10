@@ -192,6 +192,5 @@ def player_stats(name)
     player_stat_hash  
     }
     
-  }
 end
 #binding.pry 
