@@ -1,5 +1,11 @@
 require 'pry'
 # Write your code below game_hash
+puts "-------- Bonus --------\n\n"
+puts "#{most_points_scored} scored the most points this game.\n\n"
+puts "#{winning_team} won the game.\n\n"
+puts "The player with the longest name is #{player_with_longest_name}\n\n"
+  +  "His name is #{player_with_longest_name.length} chars long."
+
 def game_hash
   {
     home: {
@@ -244,7 +250,17 @@ def winning_team
     game[:away][:team_name]
   end
 end
-binding.pry 
 
 def player_with_longest_name
+  game = game_hash
+  long_name = ""
+  
+  game.each{|(key_out,val_out)|
+    val_out[:players].each{|player|
+      if(player[:player_name].length > long_name.length)
+        long_name = player[:player_name] 
+      end
+    }
+  }
+  long_name 
 end
