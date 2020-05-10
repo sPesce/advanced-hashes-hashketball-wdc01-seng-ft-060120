@@ -213,4 +213,37 @@ def big_shoe_rebounds
   }
   player[:rebounds]
 end
-#binding.pry 
+
+def most_points_scored
+  max_points = -1
+  player = {}
+  
+  game = game_hash
+  game.each{|(key_out, val_out)|
+    val_out[:players].each{|player_hash|
+      if(player_hash[:points] > max_points)
+        player = player_hash
+        max_points = player_hash[:points]
+      end
+    }
+  }
+  player[:player_name]
+end
+
+def winning_team
+  game = game_hash
+  game.each{|(key_out, val_out)|
+    val_out[:total_score] = 0
+    val_out[:players].each{|player_hash|
+    game[key_out][:total_score] += player_hash[:points]
+  }
+  if(game[:home][:total_score] > game[:away][:total_score])
+    game[:home][:team_name]
+  else
+    game[:away][:team_name]
+  end
+end
+binding.pry 
+
+def player_with_longest_name
+end
