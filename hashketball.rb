@@ -186,7 +186,7 @@ def player_stats(name)
     
     
     if (player[:player_name] == name)
-      val[:players].each{|(stat_key, stat_val)|
+      player.each{|(stat_key, stat_val)|
         if(stat_key != :player_name)
           player_stat_hash[stat_key] = stat_val
         end
