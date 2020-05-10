@@ -177,4 +177,8 @@ def player_numbers(team_name)
     num_arr
   }
 end
+
+def player_stats(name)
+  game = game
+end
 #binding.pry 
