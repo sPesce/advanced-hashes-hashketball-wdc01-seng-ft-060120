@@ -170,7 +170,9 @@ def player_numbers(team_name)
   game = game_hash
   nums = game.reduce([]){|num_arr, (key,val)|
     if(team_name == val[:team_name])
-      
+      val[:players].each{|player_hash|
+        num_arr << player_hash[:number]
+      }
     end
     num_arr
   }
