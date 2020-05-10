@@ -276,4 +276,5 @@ puts "-------- Bonus --------\n\n"
 puts "#{most_points_scored} scored the most points this game, with a score of #{max_pts}.\n\n"
 
 puts "#{winning_team} won the game with #{winning_team_score} points.\n\n"
+
 puts "The player with the longest name is #{player_with_longest_name}\n\nHis name is #{player_with_longest_name.length} chars long."
