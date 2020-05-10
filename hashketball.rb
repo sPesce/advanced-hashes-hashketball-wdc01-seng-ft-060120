@@ -157,5 +157,11 @@ def team_colors(team_name)
   }
 end
 def team_names
+  game = game_hash
+  names = game.reduce([]){|name_arr, (key,val)|
+    name_arr << val[:team_name]
+    name_arr
+  }
+  
 end 
 #binding.pry 
