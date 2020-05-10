@@ -128,7 +128,7 @@ def game_hash
 end
 
 hash = game_hash
-binding.pry 
+
 
 def num_points_scored(name)
  game_hash.each{|(key_out, value_out)|
@@ -150,4 +150,4 @@ def shoe_size(name)
  }
 end
 
-# Write code here
+binding.pry 
