@@ -200,9 +200,11 @@ end
 
 def big_shoe_rebounds
   max_shoe = -1
+  player = {}
+  
   game = game_hash
   game.each{|(key_out, val_out)|
-    
+    val_out[:players].each{|key
   }
 end
 #binding.pry 
