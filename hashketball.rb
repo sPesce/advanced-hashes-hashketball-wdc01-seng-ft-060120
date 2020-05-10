@@ -148,6 +148,7 @@ def shoe_size(name)
   }
  }
 end
+
 def team_colors(team_name)
   game = game_hash
   colors = game.each{|(key,val)|
@@ -156,12 +157,22 @@ def team_colors(team_name)
     end 
   }
 end
+
 def team_names
   game = game_hash
   names = game.reduce([]){|name_arr, (key,val)|
     name_arr << val[:team_name]
     name_arr
   }
-  
 end 
+
+def player_numbers(team_name)
+  game = game_hash
+  nums = game.reduce([]){|num_arr, (key,val)|
+    if(team_name == val[:team_name])
+      
+    end
+    num_arr
+  }
+end
 #binding.pry 
