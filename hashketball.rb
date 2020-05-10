@@ -236,6 +236,7 @@ def winning_team
     val_out[:total_score] = 0
     val_out[:players].each{|player_hash|
     game[key_out][:total_score] += player_hash[:points]
+    }
   }
   if(game[:home][:total_score] > game[:away][:total_score])
     game[:home][:team_name]
