@@ -129,11 +129,21 @@ end
 hash = game_hash
 
 def num_points_scored(name)
-  found = false
+  
   home_players = hash[:home][:players]
   away_players = hash[:away][:players]
   
-  while
+  away_players.each{|player_hash|
+    if (player_hash[player_name] == name)
+      return player_hash[:points]
+    end
+  }
+ 
+ game_hash.each{|(key_out, value_out)|
+  value_out[players].each{|player_hash|
+    
+      }
+ }
   
   
 end
