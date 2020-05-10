@@ -253,8 +253,7 @@ def winning_team_hash
     
     {:score => game[:home][:total_score], :team_name => game[:home][:team_name]} 
   else
-    {:score => game[:away]
-    game[:away][:team_name]
+    {:score => game[:away][:total_score], :team_name => game[:away][:team_name]}
   end
 end
 
@@ -275,5 +274,6 @@ end
 max_pts = num_points_scored(most_points_scored)
 puts "-------- Bonus --------\n\n"
 puts "#{most_points_scored} scored the most points this game, with a score of #{max_pts}.\n\n"
-puts "#{winning_team} won the game.\n\n"
+
+puts "#{winning_team} won the game with #{winning_team_score} points.\n\n"
 puts "The player with the longest name is #{player_with_longest_name}\n\nHis name is #{player_with_longest_name.length} chars long."
