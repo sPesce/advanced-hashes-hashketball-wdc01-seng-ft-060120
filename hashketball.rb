@@ -181,7 +181,7 @@ end
 def player_stats(name)
   game = game_hash
   
-  stats = game.reduce({}){|player_stat_hash, (key,val)
+  stats = game.reduce({}){|player_stat_hash, (key,val)|
     if (val[:players][:player_name] == name)
       val[:players].each{|(stat_key, stat_val)|
         if(stat_key != :player_name)
