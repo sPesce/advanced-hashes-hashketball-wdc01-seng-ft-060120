@@ -126,4 +126,16 @@ def game_hash
   }
 end
 
+hash = game_hash
+
+def num_points_scored(name)
+  found = false
+  home_players = hash[:home][:players]
+  away_players = hash[:away][:players]
+  
+  while
+  
+  
+end
+
 # Write code here
