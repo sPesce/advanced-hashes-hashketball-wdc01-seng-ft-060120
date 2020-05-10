@@ -232,6 +232,10 @@ def most_points_scored
 end
 
 def winning_team
+  hash = winning_team_hash
+end
+
+def winning_team
   game = game_hash
   game.each{|(key_out, val_out)|
     val_out[:total_score] = 0
@@ -260,8 +264,8 @@ def player_with_longest_name
   long_name 
 end
 
+max_pts = num_points_scored(most_points_scored)
 puts "-------- Bonus --------\n\n"
-puts "#{most_points_scored} scored the most points this game.\n\n"
+puts "#{most_points_scored} scored the most points this game, with a score of #{max_pts}.\n\n"
 puts "#{winning_team} won the game.\n\n"
-puts "The player with the longest name is #{player_with_longest_name}\n\n"
-  +  "His name is #{player_with_longest_name.length} chars long."
+puts "The player with the longest name is #{player_with_longest_name}\n\nHis name is #{player_with_longest_name.length} chars long."
