@@ -127,11 +127,9 @@ def game_hash
   }
 end
 
-hash = game_hash
-
-
 def num_points_scored(name)
- game_hash.each{|(key_out, value_out)|
+ game = game_hash
+ game.each{|(key_out, value_out)|
   value_out[:players].each{|player_hash|
     if (player_hash[:player_name] == name)
       return player_hash[:points]
@@ -141,7 +139,8 @@ def num_points_scored(name)
 end
 
 def shoe_size(name)
-   game_hash.each{|(key_out, value_out)|
+  game = game_hash
+   game.each{|(key_out, value_out)|
   value_out[:players].each{|player_hash|
     if (player_hash[:player_name] == name)
       return player_hash[:shoe_size]
