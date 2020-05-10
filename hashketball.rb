@@ -231,12 +231,18 @@ def most_points_scored
   player[:player_name]
 end
 
-def winning_team
+def winning_team_score
   hash = winning_team_hash
+  hash[:score]
+end
+def winning_team 
+  hash = winning_team_hash
+  hash[:team_name]
 end
 
-def winning_team
+def winning_team_hash
   game = game_hash
+  
   game.each{|(key_out, val_out)|
     val_out[:total_score] = 0
     val_out[:players].each{|player_hash|
@@ -244,8 +250,10 @@ def winning_team
     }
   }
   if(game[:home][:total_score] > game[:away][:total_score])
-    game[:home][:team_name]
+    
+    {:score => game[:home][:total_score], :team_name => game[:home][:team_name]} 
   else
+    {:score => game[:away]
     game[:away][:team_name]
   end
 end
